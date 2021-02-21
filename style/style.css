@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  src: url("../fonts/");
+  src: url("../fonts/?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat-ExtraBold.eot");
+  src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Montserral Medium, Arial, Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__item {
+  text-align: center;
+  width: 32%;
+  height: 280px;
+  background-color: rgba(43, 43, 43, 0.473);
+  box-shadow: 0px 0px 30px 2px #fff;
+  opacity: 0.7;
+  transition: all 0.1s;
+}
+
+.card__title {
+  font-size: 25px;
+  font-family: Montserrat Bold, Arial Black, Gadget, sans-serif;
+  padding: 0px 5px 0px 5px;
+}
+
+.card__img {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.card__description {
+  font-family: Montserral Medium, Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 15px;
+}
+
+.card__description span {
+  font-family: Montserrat Semibold, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.card__price {
+  font-family: Montserrat Bold, Arial Black, Gadget, sans-serif;
+}
+
+.card__button {
+  padding: 18px;
+  width: 100%;
+  font-family: Montserrat Bold, Arial Black, Gadget, sans-serif;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+  border: none;
+  transition: 0.5s;
+}
+
+.card__button:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-background {
+  transform: translateY(-100px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.card__item:hover .card-background {
+  transform: translateY(6px);
+  opacity: 1;
+}
+
+.card__item:hover {
+  opacity: 1;
+  height: 100%;
+}
+
+@media (max-width: 877px) {
+  .title {
+    font-size: 50px;
+  }
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__item {
+    margin-bottom: 20px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 570px) {
+  .title {
+    font-size: 45px;
+  }
+  .card__item {
+    width: 100%;
+  }
+}

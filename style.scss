@@ -1,0 +1,114 @@
+@import "fonts";
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+body {
+  background-color: black;
+  color: white;
+  @include medium;
+}
+.main {
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  &__item {
+    text-align: center;
+    width: 32%;
+    height: 280px;
+    background-color: rgba(43, 43, 43, 0.473);
+    box-shadow: 0px 0px 30px 2px #fff;
+    opacity: 0.7;
+    transition: all 0.1s;
+  }
+
+  &__title {
+    font-size: 25px;
+    @include extrabold;
+    padding: 0px 5px 0px 5px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  &__description {
+    @include medium;
+    text-align: left;
+    font-size: 15px;
+  }
+  &__description span {
+    @include semibold;
+    font-size: 16px;
+  }
+
+  &__price {
+    @include extrabold;
+  }
+
+  &__button {
+    padding: 18px;
+    width: 100%;
+    @include extrabold;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    border: none;
+    transition: 0.5s;
+  }
+  &__button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+}
+
+.card-background {
+  transform: translateY(-100px);
+  transition: 0.4s;
+  opacity: 0;
+}
+.card__item:hover .card-background {
+  transform: translateY(6px);
+  opacity: 1;
+}
+.card__item:hover {
+  opacity: 1;
+  height: 100%;
+}
+
+//media
+
+@media (max-width: 877px) {
+  .title {
+    font-size: 50px;
+  }
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__item {
+    margin-bottom: 20px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 570px) {
+  .title {
+    font-size: 45px;
+  }
+  .card__item {
+    width: 100%;
+  }
+}
