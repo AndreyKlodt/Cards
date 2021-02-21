@@ -80,6 +80,8 @@ body {
 
 .card__price {
   font-family: Montserrat Bold, Arial Black, Gadget, sans-serif;
+  text-align: left;
+  padding-left: 40px;
 }
 
 .card__button {
