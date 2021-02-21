@@ -30,6 +30,7 @@ body {
     box-shadow: 0px 0px 30px 2px #fff;
     opacity: 0.7;
     transition: all 0.1s;
+    cursor: pointer;
   }
 
   &__title {
@@ -62,6 +63,7 @@ body {
 
   &__button {
     padding: 18px;
+    cursor: pointer;
     width: 100%;
     @include extrabold;
     outline: none;
@@ -75,15 +77,23 @@ body {
     color: rgb(0, 0, 0);
   }
 }
+.card-foreground {
+  position: relative;
+  z-index: 1;
+}
 
 .card-background {
+  position: relative;
   transform: translateY(-100px);
   transition: 0.4s;
   opacity: 0;
+  visibility: hidden;
+  z-index: 0;
 }
 .card__item:hover .card-background {
   transform: translateY(6px);
   opacity: 1;
+  visibility: visible;
 }
 .card__item:hover {
   opacity: 1;
